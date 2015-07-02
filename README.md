@@ -7,7 +7,7 @@ A command-line Uber client. Request an Uber from your command line.
 ```
 $ from_central_embassy=13.743704,100.546668
 $ to_the_emquatier=13.730656,100.569770
-$ ubr $from_central_embassy $to_the_emquatier
+$ ubr $from_central_embassy $to_the_emquatier -p uberX
 Searching for available Ubers...
 Selected: uberX
 Getting the ETA...
@@ -84,6 +84,7 @@ ubr PICKUP DROPOFF
 Where __PICKUP__ and __DROPOFF__ are the coordinates to pick-up and drop-off,
 specified in `LATITUDE,LONGITUDE` format.
 It is useful to put these coordinates as shell variables.
+You can also add `-p` option to specify product type, e.g., `-p uberX`.
 
 
 ## Privacy Policy
