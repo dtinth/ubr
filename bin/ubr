@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require 'ubr/app'
+require 'ubr/cli'
+
+options = Ubr::CLI.parse_options!
+
+Ubr::App.run!(options)
