@@ -5,7 +5,7 @@ require 'json'
 module Ubr
   class API
     def initialize
-      token = File.read(File.expand_path('~/.ubr')).strip
+      token = File.read(API.token_path).strip
       @client = RestClient::Resource.new('https://api.uber.com/v1',
         headers: {
           authorization: "Bearer #{token}",
@@ -34,6 +34,9 @@ module Ubr
         redirect_uri: redirect_uri,
         code: code,
       )
+    end
+    def self.token_path
+      File.expand_path('~/.ubr')
     end
   end
 end

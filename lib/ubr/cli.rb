@@ -69,7 +69,16 @@ module Ubr
         secret = $stdin.gets.strip
       end
       result = API.authorize(client_id: client_id, code: code, secret: secret, redirect_uri: redirect_uri)
-      p result
+      token = result[:access_token]
+      if token
+        filename = API.token_path
+        File.write(filename, token)
+        File.chmod(0600, filename)
+        puts
+        puts "Hurray! Your are authorized!"
+        puts "The token is saved to #{filename}"
+      else
+      end
     end
 
   end
