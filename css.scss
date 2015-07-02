@@ -1,0 +1,21 @@
+---
+---
+
+html, body {
+  margin: 0; padding: 0;
+  width: 100%; height: 100%;
+}
+
+body {
+  background: #353433;
+  text-align: center;
+  color: #e9e8e7;
+  display: flex;
+  justify-content: center;
+}
+
+pre {
+  align-self: center;
+  font: 16px Menlo, Consolas, sans-serif;
+  padding: 1em;
+}
